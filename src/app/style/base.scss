@@ -1,0 +1,39 @@
+@use 'variables.scss' as *;
+
+
+body {
+    font-size: 12rem;
+}
+
+.main-frame {
+    padding-left: calc($main-frame-padding + $half-gutter);
+    padding-right: calc($main-frame-padding + $half-gutter);
+    margin-left: calc(-1 * $half-gutter);
+    margin-right: calc(-1 * $half-gutter);
+    box-sizing: border-box;
+    width: calc(100% + #{$gutter});
+}
+
+.main-frame.flex {
+    display: flex !important;
+    justify-content: initial !important;
+    align-items: initial !important;
+    align-content: initial !important;
+    flex-wrap: wrap !important;
+}
+
+@for $i from 1 through $total-columns {
+    .col-#{$i} {
+        width: 100%;
+        height: 100vh;
+        max-width: calc((100% / $total-columns) * #{$i});
+        padding-left: calc($gutter / 2);
+        padding-right: calc($gutter / 2);
+    }
+}
+
+@for $i from 1 through $total-columns {
+    .offset-#{$i} {
+        margin-left: calc((100% / $total-columns) * #{$i});
+    }
+}

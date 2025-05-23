@@ -1,0 +1,6 @@
+@use 'variables.scss' as *;
+
+html {
+    // 100vw = 1440px, 1px = 0.0625vw
+    font-size: 0.069444vw;
+}

@@ -1,0 +1,11 @@
+
+$total-columns: 4;
+$gutter: 32rem;
+$half-gutter: calc(#{$gutter} / 2);
+$main-frame-padding: 48rem;
+
+:root {
+    --gutter: $gutter;
+    --half-gutter: $half-gutter;
+    --main-frame-padding: $main-frame-padding;
+}
