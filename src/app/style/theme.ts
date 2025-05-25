@@ -56,3 +56,26 @@ export const ContainerHistoryFontSizes = {
         desktop: '12rem',
     }
 }
+
+export const RowCurrentInfoFontSizes = {
+    temp: {
+        mobile: '80rem',
+        tablet: '80rem',
+        desktop: '80rem',
+    },
+    local: {
+        mobile: '24rem',
+        tablet: '24rem',
+        desktop: '24rem',
+    },
+    status: {
+        mobile: '16rem',
+        tablet: '16rem',
+        desktop: '16rem',
+    },
+    aditionalInfo: {
+        mobile: '12rem',
+        tablet: '12rem',
+        desktop: '12rem',
+    }
+}

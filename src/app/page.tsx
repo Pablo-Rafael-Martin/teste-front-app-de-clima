@@ -12,6 +12,7 @@ import OutlinedInput from "@/components/OutlinedInput";
 import SecondaryText from "@/components/SecondaryText";
 import ContainerHistory from "@/components/ContainerHistory";
 import RowCurrentInfo from "@/components/RowCurrentInfo";
+import RowHistoricInfo from "@/components/RowHistoricInfo";
 
 
 export default function Home() {
@@ -51,8 +52,7 @@ export default function Home() {
                             <Flex vertical>
                                 <RowCurrentInfo />
 
-
-                                <div className="row-2"></div>
+                                <RowHistoricInfo />
                             </Flex>
                         </MainContent>
                     </Flex>
@@ -85,4 +85,5 @@ const ContainerSearch = styled.div`
 
 const MainContent = styled.div`
     flex-shrink: 0;
+    height: 100%;
 `;
