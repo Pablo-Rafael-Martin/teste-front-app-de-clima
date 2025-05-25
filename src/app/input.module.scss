@@ -1,0 +1,30 @@
+.custom-search input {
+    background-color: transparent;
+    color: #e0d6cf;
+    font-size: 18px;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+.custom-search input::placeholder {
+    color: #e0d6cf;
+    opacity: 0.6;
+}
+
+.custom-search .ant-input-affix-wrapper {
+    border: none !important;
+    box-shadow: none !important;
+    background: transparent !important;
+    padding-left: 12px;
+    height: 48px;
+    border-radius: 9999px;
+}
+
+.custom-search .ant-input-group-addon {
+    display: none !important;
+}
+
+.custom-search * {
+    all: unset !important;
+    display: none !important
+}

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { AntdRegistry } from "@ant-design/nextjs-registry";
 import "./style/index.scss";
+import '@ant-design/v5-patch-for-react-19'; 
 
 // export const metadata: Metadata = {
 //   title: "Create Next App",
