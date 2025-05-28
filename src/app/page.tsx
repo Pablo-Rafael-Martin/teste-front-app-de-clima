@@ -36,9 +36,7 @@ export default function Home() {
                             <Flex vertical style={{ padding: '24rem', gap: '42rem', height: '100%' }}>
                                 <ContainerSearch>
                                     <Space direction="vertical" style={{ width: '100%' }} size={12}>
-                                        <SecondaryText>
-                                            Local
-                                        </SecondaryText>
+                                        <SecondaryText>Local</SecondaryText>
 
                                         <OutlinedInput onSearch={handleSubmit} />
                                     </Space>

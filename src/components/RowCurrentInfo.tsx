@@ -61,10 +61,11 @@ function RowCurrentInfo() {
 const WrapperCurrentInfo = styled.div`
     width: 100%;
     padding: 32rem 16rem;
-    /* border: 1px solid white; */
+    padding-bottom: 0;
     margin-top: 32rem;
     margin-bottom: 48rem;
     flex-shrink: 0;
+    /* border: 1px solid white; */
 `;
 
 const Container1 = styled.div`
