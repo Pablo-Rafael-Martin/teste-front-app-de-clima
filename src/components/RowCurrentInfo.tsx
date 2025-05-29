@@ -61,6 +61,7 @@ function RowCurrentInfo() {
 const WrapperCurrentInfo = styled.div`
     width: 100%;
     padding: 32rem 16rem;
+    padding-right: 0;
     padding-bottom: 0;
     margin-top: 32rem;
     margin-bottom: 48rem;

@@ -22,41 +22,43 @@ export default function Home() {
     }
 
     return (
-        <Layout style={{ height: "100vh", width: "100vw", backgroundColor: "transparent" }}>
+        <>
             <GlobalVars />
-            <Content style={{ color: "white" }}>
-                <MainFrame className="main-frame">
-                    <Flex style={{ height: "100%" }} >
-                        <Image
-                            src="/images/main-bg.png" alt="Website's background" fill={true}
-                            style={{ objectFit: "cover", objectPosition: "center", zIndex: -1 }}
-                        />
+            <Layout style={{ height: "100vh", width: "100vw", backgroundColor: "transparent" }}>
+                <Content style={{ color: "white" }}>
+                    <MainFrame className="main-frame">
+                        <Flex style={{ height: "100%" }} >
+                            <Image
+                                src="/images/main-bg.png" alt="Website's background" fill={true}
+                                style={{ objectFit: "cover", objectPosition: "center", zIndex: -1 }}
+                            />
 
-                        <SearchColumn className="col-1">
-                            <Flex vertical style={{ padding: '24rem', gap: '42rem', height: '100%' }}>
-                                <ContainerSearch>
-                                    <Space direction="vertical" style={{ width: '100%' }} size={12}>
-                                        <SecondaryText>Local</SecondaryText>
+                            <SearchColumn className="col-1">
+                                <Flex vertical style={{ padding: '24rem', gap: '42rem', height: '100%' }}>
+                                    <ContainerSearch>
+                                        <Space direction="vertical" style={{ width: '100%' }} size={12}>
+                                            <SecondaryText>Local</SecondaryText>
 
-                                        <OutlinedInput onSearch={handleSubmit} />
-                                    </Space>
-                                </ContainerSearch>
+                                            <OutlinedInput onSearch={handleSubmit} />
+                                        </Space>
+                                    </ContainerSearch>
 
-                                <ContainerHistory />
-                            </Flex>
-                        </SearchColumn>
+                                    <ContainerHistory />
+                                </Flex>
+                            </SearchColumn>
 
-                        <MainContent className="col-3">
-                            <Flex vertical>
-                                <RowCurrentInfo />
+                            <MainContent className="col-3">
+                                <Flex vertical>
+                                    <RowCurrentInfo />
 
-                                <RowHistoricInfo />
-                            </Flex>
-                        </MainContent>
-                    </Flex>
-                </MainFrame>
-            </Content>
-        </Layout >
+                                    <RowHistoricInfo />
+                                </Flex>
+                            </MainContent>
+                        </Flex>
+                    </MainFrame>
+                </Content>
+            </Layout >
+        </>
     );
 }
 
@@ -84,4 +86,5 @@ const ContainerSearch = styled.div`
 const MainContent = styled.div`
     flex-shrink: 0;
     height: 100%;
+    padding-right: 0;
 `;
