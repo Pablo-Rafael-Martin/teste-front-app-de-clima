@@ -78,4 +78,45 @@ export const RowCurrentInfoFontSizes = {
         tablet: '12rem',
         desktop: '12rem',
     }
-}
+};
+
+export const TodaysInfoFontSizes = {
+    time: {
+        mobile: '12rem',
+        tablet: '12rem',
+        desktop: '12rem',
+    },
+    icon: {
+        mobile: '28rem',
+        tablet: '28rem',
+        desktop: '28rem',
+    },
+    temperature: {
+        mobile: '24rem',
+        tablet: '24rem',
+        desktop: '24rem',
+    }
+};
+
+export const NextDaysInfoFontSizes = {
+    date: {
+        mobile: '16rem',
+        tablet: '16rem',
+        desktop: '16rem',
+    },
+    temp: {
+        mobile: '20rem',
+        tablet: '20rem',
+        desktop: '20rem',
+    },
+    description: {
+        mobile: '10rem',
+        tablet: '10rem',
+        desktop: '10rem',
+    },
+    minMax: {
+        mobile: '10rem',
+        tablet: '10rem',
+        desktop: '10rem',
+    }
+};
