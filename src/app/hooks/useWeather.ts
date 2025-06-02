@@ -1,19 +1,18 @@
-'use client';
-
-import { createContext, useContext, useEffect, useState, ReactNode } from "react";
-import { fetchWeatherApi } from "openmeteo";
 import { WeatherData } from "@/types/Weather";
-import { UnlockOutlined } from "@ant-design/icons";
+import { fetchWeatherApi } from "openmeteo";
+import { useEffect, useState } from "react";
 
-interface WeatherContextValue {
+interface WeatherProps {
+    searchTerm?: string;
+}
+
+interface WeatherResonse {
     data: WeatherData | null;
     loading: boolean;
     error: string | null;
 }
 
-const WeatherContext = createContext<WeatherContextValue | undefined>(undefined);
-
-export const WeatherProvider = ({ children }: { children: ReactNode }) => {
+export const useWeather = ({ searchTerm }: WeatherProps):WeatherResonse  => {
     const [data, setData] = useState<WeatherData | null>(null);
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState<string | null>(null);
@@ -72,11 +71,21 @@ export const WeatherProvider = ({ children }: { children: ReactNode }) => {
     }
 
     useEffect(() => {
-        if (!data) return;
+        if (!searchTerm) return;
         fetchWeather();
-    }, []);
+    }, [searchTerm]);
 
-    const value: WeatherContextValue = { data, loading, error };
-
-    return <WeatherContext.Provider value={value}>{children}</WeatherContext.Provider>
+    return {
+        data,
+        loading,
+        error
+    }
 }
+
+const { data, loading, error } = useWeather({
+    searchTerm: 'aaaaa'
+})
+
+useEffect(() => {
+    // atualiza contexto
+}, [data])
